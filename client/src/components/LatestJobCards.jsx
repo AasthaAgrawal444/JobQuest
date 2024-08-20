@@ -12,11 +12,11 @@ const LatestJobCards = ({job}) => {
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -100 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.4 }}
          onClick={()=> navigate(`/description/${job._id}`)} className='p-5 rounded-md shadow-xl bg-white border border-gray-100 cursor-pointer'>
             <div>
                 <h1 className='font-medium text-lg'>{job?.company?.name}</h1>
-                <p className='text-sm text-gray-500'>India</p>
+                <p className='text-sm text-gray-500'>{job?.location}</p>
             </div>
             <div>
                 <h1 className='font-bold text-lg my-2'>{job?.title}</h1>
